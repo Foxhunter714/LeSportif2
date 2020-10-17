@@ -1,4 +1,4 @@
-package cl.storeproducts.model
+package cl.storeproducts.model.remote
 
 
 import com.google.gson.annotations.SerializedName

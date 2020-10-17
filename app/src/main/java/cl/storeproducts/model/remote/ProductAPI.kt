@@ -1,5 +1,6 @@
-package cl.storeproducts.model
+package cl.storeproducts.model.remote
 
+import cl.storeproducts.model.remote.Product
 import retrofit2.Call
 import retrofit2.http.GET
 

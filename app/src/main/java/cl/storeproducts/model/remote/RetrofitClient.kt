@@ -1,4 +1,4 @@
-package cl.storeproducts.model
+package cl.storeproducts.model.remote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
