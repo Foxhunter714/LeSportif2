@@ -8,6 +8,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import cl.storeproducts.R
 import cl.storeproducts.model.db.ProductMini
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_product.view.*
 
 
@@ -25,7 +26,7 @@ class ProductAdapter(private var productDataset: MutableList<ProductMini>) : Rec
         holder.textTitle.text = productDataset.get(position).price.toString()
         holder.textTitle2.text = productDataset.get(position).name
         holder.textTitle3.text = productDataset.get(position).id.toString()
-
+        Picasso.get().load(productDataset.get(position).image).into(holder.textTitle4)
         productSelected.value = productDataset.get(position)
     }
 
