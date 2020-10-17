@@ -30,7 +30,7 @@ class ProductFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product, container, false)
+        return inflater.inflate(R.layout.fragment_list, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,11 +38,12 @@ class ProductFragment : Fragment() {
         productRecycler.adapter = adapter
 
         val productViewModel: ProductViewModel by activityViewModels()
-        productViewModel.listProduct.observe(viewLifecycleOwner, Observer{adapter.updateItems(it)
+        productViewModel.listProduct.observe(viewLifecycleOwner, Observer{
+            adapter.updateItems(it)
         })
         var datos = Repository(view.context).loadApiData()
         adapter.productSelected.observe(viewLifecycleOwner, Observer{
 
         })
-}
+    }
 }

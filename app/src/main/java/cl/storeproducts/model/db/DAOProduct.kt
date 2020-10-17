@@ -13,7 +13,7 @@ interface DAOProduct {
     fun getAllProduct() : LiveData<List<ProductEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertProduct(quoteList: List<ProductEntity>)
+    suspend fun insertProduct(productList: List<ProductEntity>)
 
     @Query("SELECT id, name, price, image FROM product_table")
     fun getMinimalProduct() : LiveData<List<ProductMini>>
